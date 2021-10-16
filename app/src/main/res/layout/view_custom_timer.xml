@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="12dp"
+    app:contentPadding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/timer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_timer_name"
+            android:textSize="@dimen/text_title_timer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:inputType="none"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <LinearLayout
+            android:id="@+id/timer_repeat_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/timer_title"
+            app:layout_constraintEnd_toStartOf="@+id/timer_button_edit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/timer_title"
+            app:layout_constraintTop_toTopOf="@+id/timer_title"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/timer_icon_repeat"
+                android:layout_width="@dimen/icons_medium"
+                android:layout_height="@dimen/icons_medium"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/outline_repeat_24" />
+
+            <EditText
+                android:id="@+id/timer_repeat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:hint="@string/hint_repeat_dont"
+                android:textSize="@dimen/text_title_interval" />
+        </LinearLayout>
+
+        <com.jmedeisis.draglinearlayout.DragLinearLayout
+            android:id="@+id/timer_interval_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/timer_title"
+            app:layout_constraintTop_toBottomOf="@+id/timer_title" >
+        </com.jmedeisis.draglinearlayout.DragLinearLayout>
+
+        <ImageView
+            android:id="@+id/timer_button_middle"
+            android:layout_width="@dimen/icons_large"
+            android:layout_height="@dimen/icons_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timer_interval_container"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/outline_play_arrow_24"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageView
+            android:id="@+id/timer_button_left"
+            android:layout_width="@dimen/icons_large"
+            android:layout_height="@dimen/icons_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/timer_button_middle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timer_interval_container"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/outline_stop_24"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageView
+            android:id="@+id/timer_button_right"
+            android:layout_width="@dimen/icons_large"
+            android:layout_height="@dimen/icons_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/timer_button_middle"
+            app:layout_constraintTop_toBottomOf="@id/timer_interval_container"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/outline_pause_24"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageView
+            android:id="@+id/timer_button_edit"
+            android:layout_width="@dimen/icons_medium"
+            android:layout_height="@dimen/icons_medium"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/timer_button_settings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_mode_edit_outline_24"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+        <ImageView
+            android:id="@+id/timer_button_settings"
+            android:layout_width="@dimen/icons_medium"
+            android:layout_height="@dimen/icons_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_tune_24"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

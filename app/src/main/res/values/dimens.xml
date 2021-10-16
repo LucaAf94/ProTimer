@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="text_title_timer">22sp</dimen>
+    <dimen name="text_title_interval">18sp</dimen>
+    <dimen name="text_countdown_numbers">22sp</dimen>
+
+    <dimen name="icons_small">25dp</dimen>
+    <dimen name="icons_medium">32dp</dimen>
+    <dimen name="icons_large">48dp</dimen>
+</resources>
